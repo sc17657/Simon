@@ -1,0 +1,59 @@
+body{
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+
+}
+
+.container {
+    border: 5px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    flex-wrap: wrap;
+    padding: 5%;
+    
+
+
+
+}
+.Red {
+    background-color: red;
+    border-bottom-left-radius: 200px;
+    width: 200px;
+    height: 200px;
+    
+    
+    
+    
+    
+}
+
+.Blue {
+    border-bottom-right-radius: 200px;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+
+}
+
+.Green {
+    background-color: green;
+    border-top-right-radius: 200px;
+    width: 200px;
+    height: 200px;
+
+}
+
+
+.Yellow {
+   background-color: yellow;
+    border-top-left-radius: 200px;
+    width: 200px;
+    height: 200px;
+}
+
