@@ -33,7 +33,7 @@ function computerTurn() {
 
 
 }
-Start.addEventListener("click", computer);
+Start.addEventListener("click", computerTurn);
 // computerTurn()
 
 function pcMove() {
@@ -51,8 +51,14 @@ function pcMove1() {
     Green.style.backgroundColor = "white";
     setTimeout(pcGreen, 1000);
    }
-   function pcGreen() {
-        Green.style.backgroundColor = "green";
+function pcGreen() {
+    Green.style.backgroundColor = "green";
+ 
+    function pcMove2() {
+        Green.style.backgroundColor = "white";
+        setTimeout(pcGreen, 1000);    
+
+}
         
    }
 
