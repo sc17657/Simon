@@ -4,7 +4,6 @@ const Blue = document.querySelector('.buttonBlue');
 const Green = document.querySelector('.buttonGreen');
 const Red = document.querySelector('.buttonRed');
 const Start = document.querySelector('.button2')
-// console.log(Start)
 let computerChoices = [Yellow, Blue, Green, Red];
 
 
@@ -19,25 +18,23 @@ function computer() {
      Blue.style.backgroundColor = "white"
         setTimeout(clickBlue, 800)
 
-        alert("Round One");
+      
 
 }
-Start.addEventListener("click", computer);
+
 function computerTurn() {
     pcMove()
-   
-
-
     setTimeout(pcMove1, 2000)
     
-    
+    checkWin()
     
     // clickGreen()
     // clickRed()
 
 
 }
-computerTurn()
+Start.addEventListener("click", computer);
+// computerTurn()
 
 function pcMove() {
  Yellow.style.backgroundColor = "white";
@@ -52,7 +49,7 @@ function pcWhite() {
 
 function pcMove1() {
     Green.style.backgroundColor = "white";
-    setTimeout(pcGreen, 2000);
+    setTimeout(pcGreen, 1000);
    }
    function pcGreen() {
         Green.style.backgroundColor = "green";
@@ -73,7 +70,6 @@ function turnWhite() {
     checkWin()
 }
 Yellow.addEventListener("click", playerMove);
-// console.log(Yellow)
 
 
 
@@ -95,10 +91,8 @@ function playerMove1() {
    }
    function clickRed() {
         Red.style.backgroundColor = "red";
-    //    console.log("Now I am red again")
    }
    Red.addEventListener("click", playerMove2);
-//    console.log("red")
 
    function playerMove3() {
     Blue.style.backgroundColor = "white";
@@ -106,10 +100,8 @@ function playerMove1() {
    }
    function clickBlue() {
         Blue.style.backgroundColor = "blue";
-    //    console.log("Now I am blue again")
    }
    Blue.addEventListener("click", playerMove3);
-//    console.log("blue")
 
 let clickYellow = false
 let clickedGreen = false
@@ -117,7 +109,10 @@ let clickedGreen = false
 function checkWin() { 
     if (clickYellow === true && clickedGreen === true) {
         alert ("You win");
+            }
+    
+    // if (clickYellow |= true || (clickedGreen |= true)) {
+        // alert ("You loose");
 
 }
         
-}

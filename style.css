@@ -8,7 +8,7 @@ body{
 }
 
 .container {
-    border: 5px solid black;
+    /* border: 5px solid black; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,6 +18,7 @@ body{
     padding: 5%;
 }
 .buttonRed {
+    border: 5px solid black;
     background-color: red;
     border-bottom-left-radius: 200px;
     width: 200px;
@@ -26,6 +27,7 @@ body{
 }
 
 .buttonBlue {
+    border: 5px solid black;
     border-bottom-right-radius: 200px;
     background-color: blue;
     width: 200px;
@@ -34,6 +36,7 @@ body{
 }
 
 .buttonGreen {
+    border: 5px solid black;
     background-color: green;
     border-top-right-radius: 200px;
     width: 200px;
@@ -43,6 +46,7 @@ body{
 
 
 .buttonYellow {
+    border: 5px solid black;
    background-color: yellow;
     border-top-left-radius: 200px;
     width: 200px;
@@ -55,15 +59,16 @@ body{
 }
 .button2 {
     background-color: green;
+    width: 100px;
 }
 
 .controls {
-    border: 5px solid black;
+    /* border: 5px solid black; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 1w00ßpx;
+    height:   50px;
     flex-wrap: wrap;
     padding: 5%;
 }
