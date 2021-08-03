@@ -5,28 +5,72 @@ const Green = document.querySelector('.buttonGreen');
 const Red = document.querySelector('.buttonRed');
 const Start = document.querySelector('.button2')
 // console.log(Start)
+let computerChoices = [Yellow, Blue, Green, Red];
+
 
 
 function computer() {
     Yellow.style.backgroundColor = "white"
-        setTimeout(turnWhite, 1600)
-    Green.style.backgroundColor = "white"
-        setTimeout(clickGreen, 1400)
-    Red.style.backgroundColor = "white"
-        setTimeout(clickRed, 1200)
-    Blue.style.backgroundColor = "white"
-        setTimeout(clickBlue, 1000)
+        setTimeout(turnWhite, 500)
+     Green.style.backgroundColor = "white"
+        setTimeout(clickGreen, 600)
+     Red.style.backgroundColor = "white"
+        setTimeout(clickRed, 700)
+     Blue.style.backgroundColor = "white"
+        setTimeout(clickBlue, 800)
+
+        alert("Round One");
+
 }
 Start.addEventListener("click", computer);
+function computerTurn() {
+    pcMove()
+   
+
+
+    setTimeout(pcMove1, 2000)
+    
+    
+    
+    // clickGreen()
+    // clickRed()
+
+
+}
+computerTurn()
+
+function pcMove() {
+ Yellow.style.backgroundColor = "white";
+ console.log(Yellow.style.backgroundColor)
+ setTimeout(pcWhite, 2000);
+ console.log(Yellow.style.backgroundColor)
+}
+function pcWhite() {
+    Yellow.style.backgroundColor = "yellow";
+}
+
+
+function pcMove1() {
+    Green.style.backgroundColor = "white";
+    setTimeout(pcGreen, 2000);
+   }
+   function pcGreen() {
+        Green.style.backgroundColor = "green";
+        
+   }
 
 
 
 function playerMove() {
  Yellow.style.backgroundColor = "white";
- setTimeout(turnWhite, 1000);
+ console.log(Yellow.style.backgroundColor)
+ setTimeout(turnWhite, 2000);
+ console.log(Yellow.style.backgroundColor)
 }
 function turnWhite() {
     Yellow.style.backgroundColor = "yellow";
+    clickYellow = true
+    checkWin()
 }
 Yellow.addEventListener("click", playerMove);
 // console.log(Yellow)
@@ -36,18 +80,18 @@ Yellow.addEventListener("click", playerMove);
 
 function playerMove1() {
     Green.style.backgroundColor = "white";
-    setTimeout(clickGreen, 1000);
+    setTimeout(clickGreen, 2000);
    }
    function clickGreen() {
         Green.style.backgroundColor = "green";
-    //    console.log("Now I am red again")
+        clickedGreen = true;
+        checkWin()
    }
    Green.addEventListener("click", playerMove1);
-//    console.log(Green)
 
    function playerMove2() {
     Red.style.backgroundColor = "white";
-    setTimeout(clickRed, 1000);
+    setTimeout(clickRed, 500);
    }
    function clickRed() {
         Red.style.backgroundColor = "red";
@@ -58,7 +102,7 @@ function playerMove1() {
 
    function playerMove3() {
     Blue.style.backgroundColor = "white";
-    setTimeout(clickBlue, 1000);
+    setTimeout(clickBlue, 500);
    }
    function clickBlue() {
         Blue.style.backgroundColor = "blue";
@@ -67,5 +111,13 @@ function playerMove1() {
    Blue.addEventListener("click", playerMove3);
 //    console.log("blue")
 
+let clickYellow = false
+let clickedGreen = false
+
+function checkWin() { 
+    if (clickYellow === true && clickedGreen === true) {
+        alert ("You win");
+
+}
         
- 
+}
